@@ -351,7 +351,9 @@ abstract class HTMLBuilder {
       // CSS Styles
       ..write(
         'background-color: rgba(${backgroundColor.red}, ${backgroundColor.green}, ${backgroundColor.blue}, ${backgroundColor.alpha}); ',
-      );
+      )
+      ..write('--interaction-prompt: none; ')
+      ..write('--interaction-prompt-style: none; ');
 
     //Default Progress bar color
     if (progressBarColor != null) {
